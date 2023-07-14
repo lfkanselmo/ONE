@@ -1,0 +1,5 @@
+package predeterminado;
+
+public abstract class Funcionario {
+
+}

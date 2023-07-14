@@ -1,0 +1,270 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    background-color: #BBBBBB;
+}
+
+.box{
+    width: 940px;
+    padding: 20px 0;
+    position: relative;
+    margin: 0 auto;
+}
+
+nav{
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+
+nav li{
+    display: inline-block;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #C78C69;
+    text-decoration: underline;
+}
+
+.products{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.products li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-color: #000000;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.products li:hover{
+    border-color: #C78C69;
+}
+
+.products li:active{
+    border-color: #088c19;
+}
+
+.products h2{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.products li:hover h2  {
+    font-size: 33px;
+}
+
+.descriptionProduct{
+    font-size: 18px;
+}
+
+.costProduct{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer{
+    text-align: center;
+    background: url(images/footer/bg.jpg);
+    padding: 40px;
+}
+
+.copyright{
+    color: white;
+    font-size: 13px;
+    margin: 20px;
+}
+
+form{
+    margin: 40px 0;
+}
+
+form label, form legend{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padron{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox{
+    margin: 20px 0;
+}
+
+.send{
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color:white;
+    background: orange;
+    border:none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.send:hover{
+    background: darkorange;
+    transform: scale(1.2);
+}
+
+table{
+    margin: 40px 40px;
+}
+
+thead{
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+th,td{
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+
+/*CSS para el index*/
+.banner{
+    width: 100%;
+}
+
+.descripcion{
+    padding: 3em 0;
+    background: #FEFEFE;
+    width: 940px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.tituloPrincipal{
+    text-align: center;
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear: left;
+}
+
+.tituloPrincipal::first-letter{
+    font-weight: bold;
+}
+
+.descripcion p{
+    margin: 0 0 1em;
+
+}
+
+.descripcion strong{
+    font-weight: bold;
+}
+
+.descripcion em{
+    font-style: italic;
+}
+
+.utencilios{
+    width: 120px;
+    float: left;
+    margin: 0 20px 20px 0;
+    box-shadow: 5px 5px 1.5px #000000;
+}
+
+.mapa{
+    padding: 3em 0;
+    background: linear-gradient(#FEFEFE,#888888);
+}
+
+.mapa p{
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.mapa-contenido{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.diferenciales{
+    padding: 3em 0;
+    background: #888888;
+}
+
+.contenido-diferenciales{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.lista-diferenciales{
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.items{
+    line-height: 1.5;
+}
+
+.items:first-child{
+    font-weight: bold;
+    margin: 0 0 25px 0;
+}
+
+.items::before{
+    content: "\2736";
+}
+
+.imgagen-diferenciales{
+    width: 60%;
+    box-shadow: 5px 5px 1.5px #000000;
+}
+
+.video-diferenciales{
+    width: 940px;
+    margin: auto;
+    padding: 3em 0 0 0;
+}
+
+@media screen and (max-width: 480px){
+    h1{
+        text-align: center;
+    }
+
+    nav{
+        position: static;
+    }
+
+
+    .box, .descripcion, .diferenciales, .contenido-diferenciales, .video-diferenciales, .mapa-contenido{
+        width: auto;
+    }
+
+    .lista-diferenciales, .imgagen-diferenciales{
+        width: 100%;
+    }
+}

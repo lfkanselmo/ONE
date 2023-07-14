@@ -1,0 +1,61 @@
+<canvas width="600" height="400"> </canvas>
+
+<script>
+	var pantalla = document.querySelector("canvas");
+	var pincel = pantalla.getContext("2d");
+	var xRandom;
+	var yRandom;
+	var r=10;
+
+	pincel.fillStyle = "lightgrey"; //darle color gris claro
+	pincel.fillRect(0 , 0 , 600 , 400); //rellenar cuadrado
+
+	function CircleDraw (x , y , r , color) {
+		pincel.fillStyle = color;
+		pincel.beginPath();
+		pincel.arc(x , y , r , 0 , 2 * Math.PI);
+		pincel.fill();
+
+	}
+
+	function ClearScreen (){
+		pincel.clearRect(0 , 0 , 600 , 400);
+	}
+
+	
+	function RefreshScreen (){
+		ClearScreen();
+		xRandom = Math.floor(Math.random() * 570);
+		yRandom = Math.floor(Math.random() * 370);
+		target(xRandom , yRandom);
+	
+	}
+	
+	function target( x , y ){
+		ClearScreen();
+		CircleDraw(x,y,r + 20,"red");
+		CircleDraw(x,y,r + 10,"white");
+		CircleDraw(x,y,r,"red");
+	}
+
+	function shoot(event) {
+		let x = event.pageX - pantalla.offsetLeft;
+		let y = event.pageY - pantalla.offsetTop;
+
+		if ((x < xRandom + r) && 
+			(x > xRandom - r) && 
+			(y < yRandom + r) && 
+			(y > yRandom - r)) {
+
+			alert("¡¡Tiro certero!!");
+		}
+
+
+	}
+
+	
+	setInterval(RefreshScreen , 2000);
+	pantalla.onclick = shoot;
+
+
+</script>

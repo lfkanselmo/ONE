@@ -1,0 +1,71 @@
+<meta charset="utf-8">
+
+<h1>IMC</h1>
+
+<script>
+	
+	function saltarLinea(){
+		
+		document.write("<br>");
+
+	}
+
+	function imprimir(frase) {
+		
+		document.write(frase);
+		saltarLinea();
+
+	}
+
+//Funcion para calcular el IMC y determinar la condición física
+	function calcularImc(altura, peso) {
+
+		var imc = peso/(altura*altura);
+
+		if (imc<18.5) {
+			imprimir("Insuficiencia ponderal");
+			saltarLinea();
+		}
+
+		if (imc>=18.5 && imc<=24.9) {
+			imprimir("Normal");
+			saltarLinea();
+		}
+
+		if (imc>=25 && imc<30) {
+			imprimir("Sobrepeso: Preobesidad");
+			saltarLinea();
+		}
+
+		if (imc>=30) {
+			if (imc>=30 && imc<=34.9) {
+				imprimir("Obesidad: clase I");
+			saltarLinea();
+			}
+
+			if (imc>=35 && imc<=39.9) {
+				imprimir("Obesidad: clase II");
+			saltarLinea();
+			}
+
+			if (imc>=40) {
+				imprimir("Obesidad: clase III");
+			saltarLinea();
+			}
+		}
+
+
+
+		return imc;
+		
+	}
+
+
+	var peso=prompt("Ingrese su peso: ");
+	var altura=prompt("Ingrese su altura: ");
+
+
+	imprimir("El IMC es: " + calcularImc(altura,peso));
+	
+
+</script>

@@ -1,0 +1,41 @@
+<canvas width="600" height="400"> </canvas>
+
+<script>
+	var pantalla = document.querySelector("canvas");
+	var pincel = pantalla.getContext("2d");
+
+	pincel.fillStyle = "lightgrey"; //darle color gris claro
+	pincel.fillRect(0,0,600,400); //rellenar cuadrado
+
+	function CircleDraw (x,y,r) {
+		pincel.fillStyle = "blue";
+		pincel.beginPath();
+		pincel.arc(x,y,r,0,2*Math.PI);
+		pincel.fill();
+
+	}
+
+	function ClearScreen (){
+		pincel.clearRect(0,0,600,400);
+	}
+
+	
+	var x=0;
+	var direction=1;
+	function RefreshScreen (){
+		ClearScreen();
+		CircleDraw(x,20,10);
+
+		if (x==0) {
+			direction=1;
+		} else if (x==600) {
+			direction=-1;
+		}
+	
+	}
+
+
+	setInterval(RefreshScreen,5);
+	x=x+direction;
+
+</script>

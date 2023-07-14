@@ -1,0 +1,16 @@
+package predeterminado;
+
+public class Cliente implements Autenticable {
+
+	@Override
+	public void setContraseña(int contraseña) {
+		
+		
+	}
+
+	@Override
+	public boolean iniciarSesion(int contraseña) {
+		return false;
+	}
+
+}

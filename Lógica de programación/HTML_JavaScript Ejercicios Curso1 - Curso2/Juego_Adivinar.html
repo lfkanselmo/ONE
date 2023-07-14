@@ -1,0 +1,60 @@
+<meta charset="utf-8">
+
+<h1>Juego Adivinanza</h1>
+
+<script>
+	
+	function saltarLinea(){
+		
+		document.write("<br>");
+
+	}
+
+	function imprimir(frase) {
+		
+		document.write(frase);
+		saltarLinea();
+
+	}
+
+
+//generación de número aleatorio
+	var numeroSistema = Math.round(Math.random()*10);
+	var intentos=1;
+
+	while (intentos<=3) {
+		var numeroIngresado = parseInt(prompt("Ingrese número entre 1 y 10"));
+
+
+		//Validación de si el número es correcto
+		if (numeroIngresado<1 || numeroIngresado>10) {
+
+			while(numeroIngresado<1 || numeroIngresado>10) {
+
+				numeroIngresado = parseInt(prompt("Número no valido, de ser entre 1 y 10. Ingrese de nuevo"));
+
+			}
+			
+		}
+
+		//El usuario acertó o no
+		if (numeroIngresado==numeroSistema) {
+			alert("Usted acertó, en el intento " + intentos + " Y el número correcto es: "+ numeroIngresado);
+			break;
+		} else {
+			alert("No acertó. le quedan: " + (3 - intentos) + " intentos.");
+				if (intentos==3) {
+
+					alert("Ya no le quedan más intentos. El número correcto era: " + numeroSistema);
+
+				}
+			intentos++
+		}
+
+
+	}
+
+	imprimir("FIN");
+
+
+</script>

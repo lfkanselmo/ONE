@@ -1,0 +1,49 @@
+<canvas width="600" height="400"></canvas>
+
+
+<script>
+    /*El siguiente código permite dibujar círculos en la pantalla mientras el botón izquierdo se encuentra presionado, eso significa que mientras no soltemos el botón izquierdo, diseñaremos un círculo a lado de otro, que dará un efecto como si estuviéramos pasando un pincel por la pantalla. Si soltamos el botón izquierdo, la acción de mover el mouse sobre la pantalla no tendría que diseñar nada.*/
+
+    var pantalla = document.querySelector('canvas');
+    var pincel = pantalla.getContext('2d');
+    var colores = ["red","green","blue"];
+    var color = "red";
+    var lado = 50;
+
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    var puedoDibujar = false;
+
+
+    function dibujarCirculo(evento) {
+
+        if(puedoDibujar) {
+            var x = evento.pageX - pantalla.offsetLeft;
+            var y = evento.pageY - pantalla.offsetTop;
+            pincel.fillStyle = "red";
+            pincel.beginPath();
+            pincel.arc(x, y, 5, 0, 2 * 3.14);
+            pincel.fill();
+        }
+
+    }
+
+
+    pantalla.onmousemove = dibujarCirculo;
+
+    function habilitarDibujar() {
+
+        puedoDibujar = true;
+    }
+
+    function deshabilitarDibujar() {
+
+        puedoDibujar = false;
+    }
+
+    pantalla.onmousedown = habilitarDibujar;
+
+    pantalla.onmouseup = deshabilitarDibujar;
+
+</script>
