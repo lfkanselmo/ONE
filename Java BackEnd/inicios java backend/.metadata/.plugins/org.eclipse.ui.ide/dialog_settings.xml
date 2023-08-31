@@ -6,6 +6,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="G:\Escritorio\ONE\Java + Spring\Java\jdbc-control-de-stock"/>
 			<item value="G:\Escritorio\ONE\Java + Spring\Java\control-de-stock"/>
 			<item value="G:\Escritorio\ONE\Java + Spring\Java\control-de-stock\.settings"/>
 			<item value="G:\Escritorio\Portafolio\conversor-de-moneda"/>
