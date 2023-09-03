@@ -1,8 +1,0 @@
-INDEX VERSION 1.132+G:\Escritorio\ONE\Java BackEnd\inicios java backend\.metadata\.plugins\org.eclipse.jdt.core
-3413725848.index
-1865797976.index
-2761224638.index
-3205883017.index
-4041866158.index
-1040388870.index
-1239588046.index
