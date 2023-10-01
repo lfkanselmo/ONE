@@ -1,4 +1,4 @@
-package med.voll.api.domain.usuario;
+package med.voll.api.domain.usuarios;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -12,13 +12,14 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.List;
 
-@Entity(name="Usuario")
-@Table(name="usuario")
+@Table(name = "usuarios")
+@Entity(name = "Usuario")
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
 @EqualsAndHashCode(of = "id")
 public class Usuario implements UserDetails {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -38,10 +39,6 @@ public class Usuario implements UserDetails {
     @Override
     public String getUsername() {
         return login;
-    }
-
-    public Long getId() {
-        return id;
     }
 
     @Override

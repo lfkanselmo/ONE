@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @RestControllerAdvice
 public class TratadorDeErrores {
+
     @ExceptionHandler(EntityNotFoundException.class)
     public ResponseEntity tratarError404(){
         return ResponseEntity.notFound().build();
@@ -21,8 +22,9 @@ public class TratadorDeErrores {
     }
 
     private record DatosErrorValidacion(String campo, String error){
-        public DatosErrorValidacion(FieldError error){
+        public DatosErrorValidacion(FieldError error) {
             this(error.getField(), error.getDefaultMessage());
         }
     }
+
 }
